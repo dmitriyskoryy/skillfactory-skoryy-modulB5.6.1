@@ -216,13 +216,15 @@ while game:
     while input_Player_one:
         player_one = input("Ваш ход, введите № строки и № столбца: ")
         player_one = player_one.replace(" ", "")
+        
+        if player_one == 'q':
+            break
 
         if not player_one.isdigit():
             print("Необходимо указать строку и столбец, например ввести: 23")
             continue
 
-        if player_one == 'q':
-            break
+        
 
         if int(player_one) // 10 < 1 or int(player_one) // 10 > 3 and  \
                 int(player_one) % 10 < 1 or int(player_one) % 10 > 3 or \
